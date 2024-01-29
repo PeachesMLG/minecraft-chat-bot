@@ -26,7 +26,9 @@ function createBot(){
 
   bot.on('kicked', reason => {
     console.log(`Kicked for: ${reason}`);
-    createBot();
+    setTimeout(() => {
+      createBot();
+    }, 10000);
   });
 
   bot.on('kicked', console.log)
